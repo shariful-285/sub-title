@@ -1,0 +1,26 @@
+
+> web@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/app/api/transcribe/route.ts:2:1
+Module not found: Can't resolve 'openai'
+  1 | import { NextResponse } from 'next/server';
+> 2 | import OpenAI from 'openai';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | // Config
+  5 | // We prioritize Groq for speed, fallback to OpenAI
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/api/transcribe/route.ts:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

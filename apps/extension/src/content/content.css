@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Content script specific styles can go here */
+#youtube-subtitle-generator-root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+#youtube-subtitle-generator-root>* {
+    pointer-events: auto;
+}
