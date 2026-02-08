@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Subtitle Generator",
+  "version": "1.0.0",
+  "description": "Generate real-time subtitles for YouTube using AI.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/index.tsx-loader-DybZVPgj.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "run_at": "document_end",
+      "css": [
+        "assets/index-YWYOn5QZ.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "resources": [
+        "assets/settings-DB-okpeW.js",
+        "assets/index.tsx-EXfE6bhi.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
